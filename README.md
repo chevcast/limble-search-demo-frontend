@@ -1,27 +1,39 @@
-# SearchDemoFrontend
+# Limble Search Demo Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.7.
+This is a demo application intended to fulfill all requirements listed in `INSTRUCTIONS.md`. For speed I opted to use Bun instead of node, but node can easily be swapped in by removing `bun.lockb` from the frontend and backend and doing `npm install` instead.
 
-## Development server
+## Get Started
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Setup the backend API
 
-## Code scaffolding
+1. Clone the backend app.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+   `$ git clone <git@github.com>:chevcast/limble-search-demo-backend.git && cd ./limble-search-demo-backend`
 
-## Build
+2. (temporary step) Check out the `cors-hotfix` branch.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+   `$ git checkout cors-hotfix`
 
-## Running unit tests
+3. Install dependencies.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+   `$ bun install`
 
-## Running end-to-end tests
+4. Start the backend.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+   `$ bun start`
 
-## Further help
+### Now setup the frontend
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+1. Clone the repo.
+
+   `$ git clone <git@github.com>:chevcast/limble-search-demo-frontend.git`
+
+2. Install dependencies.
+
+   `$ bun install`
+
+3. Start the application!
+
+   `$ bun start`
+
+As long as the backend is running at `localhost:3000` then the frontend should be able to connect right up!

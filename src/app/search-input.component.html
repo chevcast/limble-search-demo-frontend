@@ -1,19 +1,26 @@
 <div class="flex justify-center items-center h-screen bg-gray-100">
   <div class="bg-white p-8 rounded-lg shadow-lg w-full max-w-md">
     <h1 class="text-2xl font-bold text-gray-800 mb-4">Product Search</h1>
-    <form (ngSubmit)="onSubmit(searchTerm.value)">
+    <form (submit)="onSubmit()" #searchForm="ngForm">
       <input
         type="text"
         placeholder="Search for products..."
-        #searchTerm
+        name="searchQuery"
+        [(ngModel)]="searchQuery"
+        required
         class="w-full p-3 mb-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
       />
       <button
         type="submit"
-        class="w-full bg-blue-500 text-white p-3 rounded-lg font-semibold hover:bg-blue-600 transition duration-300"
+        class="w-full bg-blue-500 text-white p-3 rounded-lg font-semibold transition duration-300"
+        [ngClass]="{'bg-blue-600 hover:bg-blue-600': searchForm.valid, 'bg-gray-400': !searchForm.valid}"
+        [disabled]="!searchForm.valid"
       >
         Search
       </button>
     </form>
+    <div *ngIf="error" class="mt-4 text-red-500">
+      {{ error }}
+    </div>
   </div>
 </div>

@@ -19,6 +19,8 @@ export class SearchService {
   startSearch(query: string): Observable<any> {
     // Disconnect previous socket connection if it exists.
     this.socket?.disconnect();
+    // Complete previous search results subject if it exists.
+    this.searchResultsSubject?.complete();
     // Create a new BehaviorSubject to store search results.
     this.searchResultsSubject = new BehaviorSubject<SearchResult | null>(null);
     // Expose the BehaviorSubject as an Observable.

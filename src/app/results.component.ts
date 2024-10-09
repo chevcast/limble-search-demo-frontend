@@ -41,7 +41,7 @@ export class ResultsComponent implements OnInit {
     }
 
     // Subscribe to search results.
-    this.searchService.searchResults$!.subscribe((result: SearchResult | null) => {
+    this.searchService.searchResults$.subscribe((result: SearchResult | null) => {
       if (result === null) return;
       switch (result.status) {
         case 'loading':

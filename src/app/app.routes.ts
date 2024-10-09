@@ -1,10 +1,11 @@
 import { Routes } from '@angular/router';
-import { SearchComponent } from './search.component';
+import { SearchInputComponent } from './search-input.component';
 import { LoadingComponent } from './loading.component';
 import { ResultsComponent } from './results.component';
 
 export const routes: Routes = [
-  { path: '', component: SearchComponent },
+  { path: '', component: SearchInputComponent },
   { path: 'loading', component: LoadingComponent },
-  { path: 'search', component: ResultsComponent }
+  { path: 'results', component: ResultsComponent },
+  { path: '**', redirectTo: '' }, // Redirect unknown paths to root.
 ];

@@ -6,5 +6,5 @@ import { ResultsComponent } from './results.component';
 export const routes: Routes = [
   { path: '', component: SearchComponent },
   { path: 'loading', component: LoadingComponent },
-  { path: 'results', component: ResultsComponent }
+  { path: 'search', component: ResultsComponent }
 ];

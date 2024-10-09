@@ -14,7 +14,7 @@ export class LoadingComponent {
   ngOnInit() {
     // Simulate a 7-second loading time, then navigate to the results page
     setTimeout(() => {
-      this.router.navigate(['/results']);
+      this.router.navigate(['/search']);
     }, 7000);
   }
 }
